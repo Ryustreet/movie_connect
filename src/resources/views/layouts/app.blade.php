@@ -7,23 +7,28 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Movie Connect') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/utility.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
+    @yield('css')
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
+                    <img class='navbar-logo' src="{{ asset('images/header_logo.png') }}">
                     {{ config('app.name', 'Movie') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -38,6 +43,18 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <!-- 機能紹介-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('機能紹介') }}</a>
+                        </li>
+                        <!-- マッチング例-->
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('マッチング例') }}</a>
+                        </li>
+                        <!-- インタビュー-->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('login') }}">{{ __('インタビュー') }}</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -72,9 +89,37 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="main">
             @yield('content')
         </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="#feature">Feature</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#information">Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="">サービス１</a></li>
+                            <li><a href="">サービス２</a></li>
+                            <li><a href="">サービス３</a></li>
+                    </div>
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="">リンク１</a></li>
+                            <li><a href="">リンク２</a></li>
+                            <li><a href="">リンク３</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2020 movie connect</p>
+        </footer>
     </div>
 </body>
 </html>

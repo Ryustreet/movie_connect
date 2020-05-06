@@ -1,0 +1,102 @@
+.navbar {
+    background-color: #62ff64;
+    color: #fff;
+}
+.navbar-logo {
+    height: 60px;
+    margin-right: 25px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.main {
+    background-color:#ffc6e3 ;
+
+}
+*{
+    maegin:0;
+    padding:0;
+    color:#636e72;
+}
+.pagetitle {
+    color: #fff;
+    margin-bottom: 20px;
+}
+.night-sky{
+    /*background:url("http://file.gasmachiroshima.com/fix-bg.jpg");*/
+    background-color:#e84393;
+    padding: 200px 0;
+    text-align:center;
+    background-attchment:fixed;
+}
+
+.night-sky h2{
+    font-family:Comic Sans MS;
+    font-size:40px;
+    margin-bottom: 40px;
+}
+
+.carousel-item{
+    height:500px;
+}
+@media(max-width:576px){
+    .service-list{
+        margin-top: -200px;
+    }
+}
+
+.service-list{
+    background-color:#ffc6e3;
+    padding: 50px;
+
+}
+
+.service-list h2{
+    text-align:center;
+    font-size:80px;
+    font-family:Comic Sans MS;
+}
+
+.service-img{
+    width: 100%;
+}
+
+.service-description{
+    padding: 30px;
+}
+
+.info{
+    border:solid 2px #636e72;
+    margin: 20px;
+    padding: 20px;
+}
+
+.icon{
+    font-size:100px;
+}
+footer{
+    background-color:#81ecec;
+    padding: 30px;
+}
+
+footer p{
+    text-align:right;
+}
+
+footer ul li{
+    list-style:none;
+}
+
+footer ul li a{
+    color:#636e72;
+    font-size:15px;
+}
+
+footer ul li a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+
+.copyright {
+    color: #fff;
+}
